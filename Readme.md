@@ -27,7 +27,7 @@ give a glimpse of productivity.
 ### Development Steps
 
 - create the ui server:
-  - Create public <u>_ui_</u> folder
+  - Create public <u>ui</u> folder
   - Go to ui folder, start the commande: **yarn init -y**
   - Create _uiServer.js_ in side the _ui_ folder
   - Create _public_ folder in side of _ui_
