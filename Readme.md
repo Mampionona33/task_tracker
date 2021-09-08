@@ -7,6 +7,7 @@
 1. [General info](#general-info)
 2. [Technologies](#technologie)
 3. [Development Steps](#development-steps)
+4. [Runing the ui server and transformation of jsx](#runing-ui-server)
 
 ---
 
@@ -44,3 +45,21 @@ give a glimpse of productivity.
   - Installing **_nodemon_** bu starting the command : **_yarn add nodemon --dev_**
   - Implementing _start_ script in _package.json_ : `"start": "nodemon uiServer.jsx -w uiServer.jsx"`
   - Test the server with command : **_yarn start_**
+  - Adding webpack with command line : **_yarn add webpack --dev_**
+  - Adding babel-loader with command line : **_yarn add babel-loader --dev_**
+  - Create _webpack.config.js_
+  - Create _src_ folder
+  - Create _App.jsx_ inside of _src_ folder
+  - Implement _webapck.config.js_
+  - Adding `"watch": "webpack --watch"` in _ui/package.json_
+  - Adding webpack-cli with command line : **_yarn add webpack-cli --dev_**
+  - Adding @babel/core with command line : **_yarn add @babel/core --dev_**
+  - Adding @babel/preset-env and @babel/preset-react with command line : **_yarn add @babel/preset-react @babel/preset-env --dev_** for the transformation with **_webpack_**
+  - Adding **.babelrc** file in _ui/src_
+
+---
+
+### Runing the ui server and transformation of jsx
+
+- go to ui folder and run command yarn start for starting the server
+- go to ui folder and run command yarn watch for watching every transformation in _App.jsx_

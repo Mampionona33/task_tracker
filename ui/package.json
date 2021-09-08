@@ -6,12 +6,19 @@
   "author": "Mampionona33 <ramamps33@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon uiServer.jsx -w uiServer.jsx"
+    "start": "nodemon uiServer.jsx -w uiServer.jsx",
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.4",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^2.0.12",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
   }
 }
