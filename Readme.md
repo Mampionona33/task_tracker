@@ -32,6 +32,6 @@ give a glimpse of productivity.
   - Create _uiServer.js_ in side the _ui_ folder
   - Create _public_ folder in side of _ui_
   - Insert _index.html_ in the _public_ folder
-  - Implementing _<div id="root">Test</div>_ in _index.html_
+  - Implementing `<div id="root">Test</div>` in _index.html_
   - Go to _ui_ folder and install _express_ with the command _yarn add express_
   - Implementing the _uiServer.js_ code
