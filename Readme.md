@@ -40,3 +40,7 @@ give a glimpse of productivity.
     - Mounting middleware : _express.static('public')_ in app by using function _use()_
     - Starting the server by using _listen()_ function : `app.listen(3000, function ...`
   - Make a tray by start the command : **node uiServer.js**
+  - Runing `http://localhost:3000/` in the browser
+  - Installing **_nodemon_** bu starting the command : **_yarn add nodemon --dev_**
+  - Implementing _start_ script in _package.json_ : `"start": "nodemon uiServer.jsx -w uiServer.jsx"`
+  - Test the server with command : **_yarn start_**
