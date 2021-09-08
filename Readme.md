@@ -24,13 +24,13 @@ give a glimpse of productivity.
 ---
 
 \* [express](https://expressjs.com/fr/4x/api.html): Version 4.17.1  
-\*[node](https://nodejs.org/dist/v14.17.6/node-v14.17.6-x64.msi): v15.9.0
+\* [node](https://nodejs.org/dist/v14.17.6/node-v14.17.6-x64.msi): v15.9.0
 
 ---
 
 ### Development Steps
 
-- create the ui server
+- create the ui server:  
   `* Create public ui folder`  
   `* Go to ui folder, start the commande: yarn init -y`  
   `* Create uiServer.js in side the ui folder`  
