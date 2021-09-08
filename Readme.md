@@ -26,11 +26,11 @@ give a glimpse of productivity.
 
 ### Development Steps
 
-- create the ui server:  
-  `* Create public *ui* folder`  
-  `* Go to ui folder, start the commande: *yarn init -y* `  
-  `* Create *uiServer.js* in side the *ui* folder`  
-  `* Create *public* folder in side of *ui*`  
-  `* Insert *index.html* in the *public* folder`  
-  `* Go to *ui* folder and install *express* with the command *yarn add express*`
-  `* Implementing the *uiServer.js* code`
+- create the ui server:
+  - Create public _ui_ folder
+  - Go to ui folder, start the commande: _yarn init -y_
+  - Create _uiServer.js_ in side the _ui_ folder
+  - Create _public_ folder in side of _ui_
+  - Insert _index.html_ in the _public_ folder
+  - Go to _ui_ folder and install _express_ with the command _yarn add express_
+  - Implementing the _uiServer.js_ code
