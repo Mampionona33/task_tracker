@@ -28,7 +28,7 @@ give a glimpse of productivity.
 
 - create the ui server:
   - Create public _ui_ folder
-  - Go to ui folder, start the commande: **yarn init -y**
+  - Go to _ui_ folder, start the commande: **yarn init -y**
   - Create _uiServer.js_ in side the _ui_ folder
   - Create _public_ folder in side of _ui_
   - Insert _index.html_ in the _public_ folder
@@ -39,4 +39,4 @@ give a glimpse of productivity.
     - Instantiate a variable _app_ by calling _express()_;
     - Mounting middleware : _express.static('public')_ in app by using function _use()_
     - Starting the server by using _listen()_ function : `app.listen(3000, function ...`
-  - Make a tray by start the command : **node server.js**
+  - Make a tray by start the command : **node uiServer.js**
