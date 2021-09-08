@@ -34,4 +34,9 @@ give a glimpse of productivity.
   - Insert _index.html_ in the _public_ folder
   - Implementing `<div id="root">Test</div>` in _index.html_
   - Go to _ui_ folder and install _express_ with the command _yarn add express_
-  - Implementing the _uiServer.js_ code
+  - Implementing the _uiServer.js_ code by :
+    - importing _express_ with `const express = require('express');`
+    - Instantiate a variable _app_ by calling _express()_;
+    - Mounting middleware : _express.static('public')_ in app by using function _use()_
+    - Starting the server by using _listen()_ function : `app.listen(3000, function ...`
+  - Make a tray by start the command **node server.js**
