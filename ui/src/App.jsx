@@ -1,16 +1,33 @@
-class HelloWorld extends React.Component {
+class TaskAdd extends React.Component {
   render() {
-    const continent = ['Africa', 'Asia', 'Erope', 'Madagascar'];
-    const helloContinents = Array.from(continent, (c) => `Hello ${c}!`);
-    const message = helloContinents.join(' ');
-
+    return <div>this is a placeholder for adding new task</div>;
+  }
+}
+class TaskFilter extends React.Component {
+  render() {
+    return <div>this is a placeholder for filtering tasks</div>;
+  }
+}
+class TaskTable extends React.Component {
+  render() {
+    return <div>this is a placeholder for presenting a table containing the list of task.</div>;
+  }
+}
+class TaskList extends React.Component {
+  render() {
     return (
-      <div>
-        <h1>{message}</h1>
-      </div>
+      <React.Fragment>
+        <h1>Task Tracker</h1>
+        <TaskAdd />
+        <hr />
+        <TaskFilter />
+        <hr />
+        <TaskTable />
+      </React.Fragment>
     );
   }
 }
-const element = <HelloWorld />;
 
-ReactDOM.render(element, document.getElementB
+const element = <TaskList />;
+
+ReactDOM.render(element, document.getElementById('root'));

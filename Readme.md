@@ -56,6 +56,7 @@ give a glimpse of productivity.
   - Adding @babel/core with command line : **_yarn add @babel/core --dev_**
   - Adding @babel/preset-env and @babel/preset-react with command line : **_yarn add @babel/preset-react @babel/preset-env --dev_** for the transformation with **_webpack_**
   - Adding **.babelrc** file in _ui/src_
+  - Replacing the _helloworld_ classe by three placeholders
 
 ---
 
