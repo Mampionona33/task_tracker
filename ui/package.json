@@ -8,11 +8,12 @@
   "scripts": {
     "start": "nodemon -w uiServer.js -w .env uiServer.js",
     "compile": "webpack --mode production",
-    "watch": "webpack --watch"
+    "watch": "webpack --progress --watch"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",

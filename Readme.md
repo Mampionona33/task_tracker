@@ -58,8 +58,10 @@ give a glimpse of productivity.
   - Adding **.babelrc** file in _ui/src_
   - Replacing the _helloworld_ classe by three placeholders
   - Installing dotenv for use environment variables : _yarn add dotenv_
-  - Import dotenv in *ui/uiServer.js*
-  - Create the **.env** 
+  - Import dotenv in _ui/uiServer.js_
+  - Create the **.env**
+  - Adding **_--progress_** in _watch_ in _package.json_ for updating the **app.bundle.js** in every change in all files _.jsx_
+  - Installing react in ui folder: **_yarn add react_**
 
 ---
 
