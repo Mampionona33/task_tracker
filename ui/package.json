@@ -6,10 +6,12 @@
   "author": "Mampionona33 <ramamps33@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon uiServer.jsx -w uiServer.jsx",
+    "start": "nodemon -w uiServer.js -w .env uiServer.js",
+    "compile": "webpack --mode production",
     "watch": "webpack --watch"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1"
   },
   "devDependencies": {

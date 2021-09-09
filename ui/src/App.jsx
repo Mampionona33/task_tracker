@@ -1,18 +1,6 @@
-class TaskAdd extends React.Component {
-  render() {
-    return <div>this is a placeholder for adding new task</div>;
-  }
-}
-class TaskFilter extends React.Component {
-  render() {
-    return <div>this is a placeholder for filtering tasks</div>;
-  }
-}
-class TaskTable extends React.Component {
-  render() {
-    return <div>this is a placeholder for presenting a table containing the list of task.</div>;
-  }
-}
+import TaskAdd from './TaskAdd.jsx';
+import TaskFilter from './taskFilter.jsx';
+import TaskTable from './taskTable.jsx';
 class TaskList extends React.Component {
   render() {
     return (
