@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default class TaskTable extends React.Component {
   render() {
     const rowStyle = { border: '1.5px solid silver', padding: 4 };

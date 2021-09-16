@@ -1,21 +1,16 @@
-import TaskAdd from './taskAdd.jsx';
-import TaskFilter from './taskFilter.jsx';
-import TaskTable from './taskTable.jsx';
-class TaskList extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <h1>Task Tracker</h1>
-        <TaskAdd />
-        <hr />
-        <TaskFilter />
-        <hr />
-        <TaskTable />
-      </React.Fragment>
-    );
-  }
-}
+// client side
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import TaskList from './taskList.jsx';
+import 'babel-polyfill';
+import 'whatwg-fetch';
 
 const element = <TaskList />;
 
 ReactDOM.render(element, document.getElementById('root'));
+
+if (module.hot) {
+  module.hot.accept();
+  console.log(`this is hotmodule ${module.hot}`);
+}

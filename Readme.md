@@ -61,7 +61,7 @@ give a glimpse of productivity.
   - Import dotenv in _ui/uiServer.js_
   - Create the **.env**
   - Adding **_--progress_** in _watch_ in _package.json_ for updating the **app.bundle.js** in every change in all files _.jsx_
-  - Installing react in ui folder: **_yarn add react_**
+  - Installing _react_; _react-dom_; _prop-types_; _whatwg-fetch_; _babel-polyfill_ in ui folder: **_yarn add react react-dom prop-types whatwg-fetch babel-polyfill_**
 
 ---
 
