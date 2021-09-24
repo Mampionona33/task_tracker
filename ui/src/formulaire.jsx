@@ -2,7 +2,7 @@ import React from 'react';
 import ListSelection from './TaskAddComponents/listSelection';
 import db from './db.json';
 
-export default class TaskAdd extends React.Component {
+export default class Formulaire extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
