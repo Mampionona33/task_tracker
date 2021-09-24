@@ -1,92 +1,54 @@
 import React from 'react';
 import ListSelection from './TaskAddComponents/listSelection';
-
-const db = {
-  portailList: [
-    { value: 'di', label: 'DI' },
-    { value: 'ae', label: 'AE' },
-    { value: 'ne', label: 'NE' },
-    { value: 'me', label: 'ME' },
-    { value: 'aero', label: 'AERO' },
-  ],
-  typTrav: [
-    { value: ' --- ', label: ' ---' },
-    { value: ' Contenu ', label: ' Contenu' },
-    { value: ' Contenu (Zappé) ', label: ' Contenu (Zappé)' },
-    { value: ' Contenu (ContenuFullMAJ) ', label: ' Contenu (ContenuFullMAJ)' },
-    { value: ' ContenuFullCréa ', label: ' ContenuFullCréa' },
-    { value: ' ContenuFullCréaPrio ', label: ' ContenuFullCréaPrio' },
-    { value: ' ContenuFullMAJ ', label: ' ContenuFullMAJ' },
-    { value: ' ContenuFullMAJPrio ', label: ' ContenuFullMAJPrio' },
-    { value: ' Créa ', label: ' Créa' },
-    { value: ' CréaLight ', label: ' CréaLight' },
-    { value: ' CréaLightPrio ', label: ' CréaLightPrio' },
-    { value: ' CréaPrio ', label: ' CréaPrio' },
-    { value: ' MAJ ', label: ' MAJ' },
-    { value: ' MAJLight ', label: ' MAJLight' },
-    { value: ' MAJLightPrio ', label: ' MAJLightPrio' },
-    { value: ' MAJPrio ', label: ' MAJPrio' },
-    { value: ' MAJFullPrio ', label: ' MAJFullPrio' },
-    { value: ' MAJFull ', label: ' MAJFull' },
-    { value: ' MAJSPEC ', label: ' MAJSPEC' },
-    { value: ' PDF ', label: ' PDF' },
-    { value: ' MAJ BOOST ', label: ' MAJ BOOST' },
-    { value: ' Jugement ', label: ' Jugement' },
-    { value: ' REASSOPROD ', label: ' REASSOPROD' },
-    { value: ' AUTOVALIDCREA ', label: ' AUTOVALIDCREA' },
-    { value: ' AUTOVALIDMAJ ', label: ' AUTOVALIDMAJ' },
-    { value: ' RFQ ', label: ' RFQ' },
-    { value: ' MAJ Prix ', label: ' MAJ Prix' },
-    { value: ' Projet Prix ', label: ' Projet Prix' },
-    { value: ' VALIDCLIENT ', label: ' VALIDCLIENT' },
-    { value: ' VALIDOUT ', label: ' VALIDOUT' },
-    { value: ' Matching Grille Tarifaire ', label: ' Matching Grille Tarifaire' },
-    { value: ' Matching PDF ', label: ' Matching PDF' },
-    { value: ' CREADemo ', label: ' CREADemo' },
-    { value: ' MAJT ', label: ' MAJT' },
-    { value: ' MAJNew ', label: ' MAJNew' },
-    { value: ' AUTOVALIDCREADemo ', label: ' AUTOVALIDCREADemo' },
-    { value: ' AUTOVALIDCREADemoLIGHT ', label: ' AUTOVALIDCREADemoLIGHT' },
-    { value: ' AUTOVALIDCREADemoFULL ', label: ' AUTOVALIDCREADemoFULL' },
-    { value: ' AUTOVALIDMAJT ', label: ' AUTOVALIDMAJT' },
-    { value: ' AUTOVALIDMAJTLIGHT ', label: ' AUTOVALIDMAJTLIGHT' },
-    { value: ' AUTOVALIDMAJTFULL ', label: ' AUTOVALIDMAJTFULL' },
-    { value: ' AUTOVALIDMAJNew ', label: ' AUTOVALIDMAJNew' },
-    { value: ' AUTOVALIDCREAPrio ', label: ' AUTOVALIDCREAPrio' },
-    { value: ' AUTOVALIDCREALIGHTPrio ', label: ' AUTOVALIDCREALIGHTPrio' },
-    { value: ' AUTOVALIDCREAFULLPrio ', label: ' AUTOVALIDCREAFULLPrio' },
-    { value: ' AUTOVALIDMAJPrio ', label: ' AUTOVALIDMAJPrio' },
-    { value: ' AUTOVALIDMAJLIGHTPrio ', label: ' AUTOVALIDMAJLIGHTPrio' },
-    { value: ' AUTOVALIDMAJFULLPrio ', label: ' AUTOVALIDMAJFULLPrio' },
-  ],
-  statCom: [
-    { value: ' --- ', label: ' ---' },
-    { value: ' Abandon ', label: ' Abandon' },
-    { value: ' Abonné ', label: ' Abonné' },
-    { value: ' Dégradé ', label: ' Dégradé' },
-    { value: ' DégradéDefinitif ', label: ' DégradéDefinitif' },
-    { value: ' Essai ', label: ' Essai' },
-    { value: ' EssaiNouveau ', label: ' EssaiNouveau' },
-    { value: ' EssaiPayant ', label: ' EssaiPayant' },
-    { value: ' Retiré ', label: ' Retiré' },
-  ],
-  statIvpn: [
-    { value: 'I', label: 'I' },
-    { value: 'V', label: 'v' },
-    { value: 'p', label: 'p' },
-    { value: 'N', label: 'N' },
-  ],
-  etatFiche: [
-    { value: 'Normal', label: 'Normal' },
-    { value: 'Sby', label: 'Sby' },
-    { value: 'Paf', label: 'Paf' },
-  ],
-};
+import db from './db.json';
 
 export default class TaskAdd extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      numFich: '',
+      portailSelect: 'DI',
+      typeTrav: '---',
+      statIvpn: 'I',
+      etatFiche: 'Normal',
+      statCom: '---',
+      cat: '',
+      nbAvant: '',
+      nbApres: '',
+      comment: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  /* permet de detecter les changements et de reccuperer les valeurs saisie par l'utilisateur */
+  handleChange(event) {
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
+    // console.log(name);
+    // console.log(value);
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  /* permet de capturer l'evenement click sur le boutton submit */
+  handleSubmit(event) {
+    event.preventDefault();
+    const target = event.target;
+    target.reset();
+    alert(`
+    Num fiche : ${this.state.numFich}
+    Le portail est : ${this.state.portailSelect} ; 
+    Le type de travail est : ${this.state.typeTrav};
+    Statut commercial est : ${this.state.statCom};
+    Etat de la fiche est : ${this.state.etatFiche};
+    Statut IVPN est : ${this.state.statIvpn}
+    Le catégorie est : ${this.state.cat}
+    Nombre avant : ${this.state.nbAvant}
+    Nombre apres : ${this.state.nbApres}
+    Comment : ${this.state.comment}
+    `);
   }
 
   render() {
@@ -99,65 +61,86 @@ export default class TaskAdd extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label htmlFor='numFiche'>
           NUM FICHE *
-          <input type='text' name='' id='' />
+          <input type='text' name='numFich' id='numFich' value={this.state.value} onChange={this.handleChange} />
         </label>
+
         <br />
+
         <label htmlFor='portailSelect'>
           PORTAIL *
-          <select name='portailSelect' id='portailSelect'>
+          <select name='portailSelect' id='portailSelect' value={this.state.value} onChange={this.handleSelectChange}>
             {pList}
           </select>
         </label>
+
         <br />
+
         <label htmlFor='typeTrav'>
           TYPE DE TRAV *
-          <select name='typeTrav' id='typeTrav'>
+          <select name='typeTrav' id='typeTrav' value={this.state.value} onChange={this.handleChange}>
             {typeTrav}
           </select>
         </label>
+
         <br />
+
         <label htmlFor='statCom'>
           STATUS COM *
-          <select name='statCom' id='statCom'>
+          <select name='statCom' id='statCom' value={this.state.value} onChange={this.handleChange}>
             {statCom}
           </select>
         </label>
+
         <br />
+
         <label htmlFor='statIvpn'>
           STATUS IVPN *
-          <select name='statIvpn' id='statIvpn'>
+          <select name='statIvpn' id='statIvpn' value={this.state.value} onChange={this.handleChange}>
             {statIvpn}
           </select>
         </label>
+
         <br />
+
         <label htmlFor='etatFiche'>
           ETAT FICHE *
-          <select name='etatFiche' id='etatFiche'>
+          <select name='etatFiche' id='etatFiche' value={this.state.value} onChange={this.handleChange}>
             {etatFiche}
           </select>
         </label>
+
         <br />
+
         <label htmlFor='cat'>
           CATEGORY
-          <input type='text' name='cat' id='' />
+          <input type='text' name='cat' id='' value={this.state.value} onChange={this.handleChange} />
         </label>
+
         <br />
+
         <label htmlFor='nbAvant'>
           NOMBRE AVANT
-          <input type='text' name='nbAvant' id='nbAvant' />
+          <input type='text' name='nbAvant' id='nbAvant' value={this.state.value} onChange={this.handleChange} />
         </label>
+
         <br />
+
         <label htmlFor='nbApres'>
           NOMBRE APRES
-          <input type='text' name='nbApres' id='nbApres' />
+          <input type='text' name='nbApres' id='nbApres' value={this.state.value} onChange={this.handleChange} />
         </label>
+
         <br />
+
         <label htmlFor='comment'>
           COMMENTS <br />
-          <textarea name='comment' id='' cols='30' rows='10'></textarea>
+          <textarea name='comment' id='' cols='30' rows='10' value={this.state.value} onChange={this.handleChange}></textarea>
         </label>
+
         <br />
-        <input type='submit' value='Save' />
+
+        <input type='submit' value='Submit' />
+        <input type='button' value='Save' />
       </form>
     );
   }
