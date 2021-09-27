@@ -1,0 +1,60 @@
+.formCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  max-height: 600px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  border-radius: 10px;
+  background-color: #fff;
+  border: none;
+  margin: 0.5rem;
+}
+
+.formCont-formulaire-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 900;
+}
+
+.formCont-formulaire-label-input {
+  margin: 0.2rem 0rem 0.2rem 1rem;
+}
+
+.formCont-formulaire-labelTxt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formCont-formulaire-labelTxt-txt {
+  border-radius: 10px;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.formCont-formulaire-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0.5rem 0;
+}
+/*# sourceMappingURL=formulaire.css.map */

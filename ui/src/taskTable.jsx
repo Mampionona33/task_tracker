@@ -1,25 +1,52 @@
 import React from 'react';
+import taskTableCss from '../public/css/taskTable.css';
 
 export default class TaskTable extends React.Component {
   render() {
     const rowStyle = { border: '1.5px solid silver', padding: 4 };
     return (
-      <table style={{ borderCollapse: 'collapse' }}>
+      <table className='taskTable'>
         <thead>
-          <tr>
-            <th style={rowStyle}>type de travail</th>
-            <th style={rowStyle}>booth number</th>
-            <th style={rowStyle}>status com</th>
-            <th style={rowStyle}>status ivpn</th>
-            <th style={rowStyle}>url fiche</th>
-            <th style={rowStyle}>état</th>
-            <th style={rowStyle}>nb avant</th>
-            <th style={rowStyle}>nb apres</th>
-            <th style={rowStyle}>date début</th>
-            <th style={rowStyle}>date validation</th>
-            <th style={rowStyle}>durée de production</th>
-            <th style={rowStyle}>productivité</th>
-            <th style={rowStyle}>Action</th>
+          <tr className='taskTable-header'>
+            <th style={rowStyle} className='taskTable-header-row'>
+              type de travail
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              booth number
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              status com
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              status ivpn
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              url fiche
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              état
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              nb avant
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              nb apres
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              date début
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              date validation
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              durée de production
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              productivité
+            </th>
+            <th style={rowStyle} className='taskTable-header-row'>
+              Action
+            </th>
           </tr>
         </thead>
       </table>

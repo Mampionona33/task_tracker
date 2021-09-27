@@ -1,6 +1,7 @@
 import React from 'react';
 import ListSelection from './TaskAddComponents/listSelection';
 import db from './db.json';
+import formulaireCss from '../public/css/formulaire.css';
 
 export default class Formulaire extends React.Component {
   constructor(props) {
@@ -58,90 +59,73 @@ export default class Formulaire extends React.Component {
     const statIvpn = db.statIvpn.map((i, index) => <ListSelection value={i.value} txt={i.label} key={index} />);
     const etatFiche = db.etatFiche.map((i, index) => <ListSelection value={i.value} txt={i.label} key={index} />);
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor='numFiche'>
-          NUM FICHE *
-          <input type='text' name='numFich' id='numFich' value={this.state.value} onChange={this.handleChange} />
-        </label>
+      <fieldset className='formCont'>
+        <form onSubmit={this.handleSubmit} className='formCont-formulaire'>
+          <label htmlFor='numFiche' className='formCont-formulaire-label'>
+            NUM FICHE *
+            <input className='formCont-formulaire-label-input' type='text' name='numFich' id='numFich' value={this.state.value} onChange={this.handleChange} />
+          </label>
 
-        <br />
+          <label htmlFor='portailSelect' className='formCont-formulaire-label'>
+            PORTAIL *
+            <select className='formCont-formulaire-label-input' name='portailSelect' id='portailSelect' value={this.state.value} onChange={this.handleSelectChange}>
+              {pList}
+            </select>
+          </label>
 
-        <label htmlFor='portailSelect'>
-          PORTAIL *
-          <select name='portailSelect' id='portailSelect' value={this.state.value} onChange={this.handleSelectChange}>
-            {pList}
-          </select>
-        </label>
+          <label htmlFor='typeTrav' className='formCont-formulaire-label'>
+            TYPE DE TRAV *
+            <select className='formCont-formulaire-label-input' name='typeTrav' id='typeTrav' value={this.state.value} onChange={this.handleChange}>
+              {typeTrav}
+            </select>
+          </label>
 
-        <br />
+          <label htmlFor='statCom' className='formCont-formulaire-label'>
+            STATUS COM *
+            <select className='formCont-formulaire-label-input' name='statCom' id='statCom' value={this.state.value} onChange={this.handleChange}>
+              {statCom}
+            </select>
+          </label>
 
-        <label htmlFor='typeTrav'>
-          TYPE DE TRAV *
-          <select name='typeTrav' id='typeTrav' value={this.state.value} onChange={this.handleChange}>
-            {typeTrav}
-          </select>
-        </label>
+          <label htmlFor='statIvpn' className='formCont-formulaire-label'>
+            STATUS IVPN *
+            <select className='formCont-formulaire-label-input' name='statIvpn' id='statIvpn' value={this.state.value} onChange={this.handleChange}>
+              {statIvpn}
+            </select>
+          </label>
 
-        <br />
+          <label htmlFor='etatFiche' className='formCont-formulaire-label'>
+            ETAT FICHE *
+            <select className='formCont-formulaire-label-input' name='etatFiche' id='etatFiche' value={this.state.value} onChange={this.handleChange}>
+              {etatFiche}
+            </select>
+          </label>
 
-        <label htmlFor='statCom'>
-          STATUS COM *
-          <select name='statCom' id='statCom' value={this.state.value} onChange={this.handleChange}>
-            {statCom}
-          </select>
-        </label>
+          <label htmlFor='cat' className='formCont-formulaire-label'>
+            CATEGORY
+            <input className='formCont-formulaire-label-input' type='text' name='cat' id='' value={this.state.value} onChange={this.handleChange} />
+          </label>
 
-        <br />
+          <label htmlFor='nbAvant' className='formCont-formulaire-label'>
+            NOMBRE AVANT
+            <input className='formCont-formulaire-label-input' type='text' name='nbAvant' id='nbAvant' value={this.state.value} onChange={this.handleChange} />
+          </label>
 
-        <label htmlFor='statIvpn'>
-          STATUS IVPN *
-          <select name='statIvpn' id='statIvpn' value={this.state.value} onChange={this.handleChange}>
-            {statIvpn}
-          </select>
-        </label>
+          <label htmlFor='nbApres' className='formCont-formulaire-label'>
+            NOMBRE APRES
+            <input className='formCont-formulaire-label-input' type='text' name='nbApres' id='nbApres' value={this.state.value} onChange={this.handleChange} />
+          </label>
 
-        <br />
-
-        <label htmlFor='etatFiche'>
-          ETAT FICHE *
-          <select name='etatFiche' id='etatFiche' value={this.state.value} onChange={this.handleChange}>
-            {etatFiche}
-          </select>
-        </label>
-
-        <br />
-
-        <label htmlFor='cat'>
-          CATEGORY
-          <input type='text' name='cat' id='' value={this.state.value} onChange={this.handleChange} />
-        </label>
-
-        <br />
-
-        <label htmlFor='nbAvant'>
-          NOMBRE AVANT
-          <input type='text' name='nbAvant' id='nbAvant' value={this.state.value} onChange={this.handleChange} />
-        </label>
-
-        <br />
-
-        <label htmlFor='nbApres'>
-          NOMBRE APRES
-          <input type='text' name='nbApres' id='nbApres' value={this.state.value} onChange={this.handleChange} />
-        </label>
-
-        <br />
-
-        <label htmlFor='comment'>
-          COMMENTS <br />
-          <textarea name='comment' id='' cols='30' rows='10' value={this.state.value} onChange={this.handleChange}></textarea>
-        </label>
-
-        <br />
-
-        <input type='submit' value='Submit' />
-        <input type='button' value='Save' />
-      </form>
+          <label htmlFor='comment' className='formCont-formulaire-labelTxt'>
+            COMMENTS <br />
+            <textarea className='formCont-formulaire-labelTxt-txt' name='comment' id='' cols='30' rows='10' value={this.state.value} onChange={this.handleChange}></textarea>
+          </label>
+          <div className='formCont-formulaire-buttons'>
+            <input type='submit' value='Submit' />
+            <input type='button' value='Save' />
+          </div>
+        </form>
+      </fieldset>
     );
   }
 }

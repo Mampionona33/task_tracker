@@ -1,0 +1,37 @@
+.formCont {
+  display: flex;
+  max-width: fit-content;
+  max-height: 600px;
+  flex-wrap: wrap;
+  justify-content: start;
+  border-radius: 10px;
+  background-color: #fff;
+  border: none;
+  margin: 0.5rem;
+
+  &-formulaire {
+    &-label {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 900;
+      
+      &-input {
+        margin: 0.2rem 0rem 0.2rem 1rem;
+      }
+    }
+    &-labelTxt {
+      display: flex;
+      flex-direction: column;
+      &-txt {
+        border-radius: 10px;
+        outline: none;
+        padding: 0.5rem;
+      }
+    }
+    &-buttons {
+      display: flex;
+      flex-direction: row;
+      margin: 0.5rem 0;
+    }
+  }
+}

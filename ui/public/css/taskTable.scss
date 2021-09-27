@@ -1,0 +1,24 @@
+.taskTable {
+  border-collapse: collapse;
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  &-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    @media screen and (max-width: 776px) {
+      font-size: 0.7rem;
+    }
+    @media screen and(max-width:584px) {
+      font-size: 0.5rem;
+    }
+    @media screen and(max-width:456px) {
+      font-size: 0.4rem;
+    }
+    @media screen and(max-width:396px) {
+      font-size: 0.3rem;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.taskTable {
+  border-collapse: collapse;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.taskTable-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+}
+
+@media screen and (max-width: 776px) {
+  .taskTable-header {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 584px) {
+  .taskTable-header {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 456px) {
+  .taskTable-header {
+    font-size: 0.4rem;
+  }
+}
+
+@media screen and (max-width: 396px) {
+  .taskTable-header {
+    font-size: 0.3rem;
+  }
+}
+/*# sourceMappingURL=taskTable.css.map */
