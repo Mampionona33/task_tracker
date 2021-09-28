@@ -11,12 +11,13 @@ export default class TaskList extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <hr />
-        <Formulaire />
-        <hr />
-        <TaskFilter />
-        <hr />
-        <TaskTable />
+        <div className='body'>
+          <Formulaire />
+          <fieldset className='body-right'>
+            <TaskFilter />
+            <TaskTable />
+          </fieldset>
+        </div>
       </React.Fragment>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import ListSelection from './TaskAddComponents/listSelection';
+import ListSelection from './Components/listSelection';
 import db from './db.json';
 import formulaireCss from '../public/css/formulaire.css';
 
