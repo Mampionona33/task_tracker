@@ -1,9 +1,20 @@
 import React from 'react';
-import taskTableCss from '../public/css/taskTable.css';
+import TableRow from './TableRow';
+import db from './db.json';
 
 export default class TaskTable extends React.Component {
+  constructor() {
+    super();
+  }
   render() {
     const rowStyle = { /* border: '1.5px solid silver',  */ padding: 4 };
+
+    db.fiche.forEach((fiche) => {
+      // console.log(fiche.numFiche);
+    });
+
+    const TableRows = [];
+
     return (
       <table className='taskTable'>
         <thead>
@@ -39,6 +50,7 @@ export default class TaskTable extends React.Component {
             </th>
           </tr>
         </thead>
+        <tbody>{TableRows}</tbody>
       </table>
     );
   }

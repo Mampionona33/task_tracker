@@ -1,10 +1,17 @@
 import React from 'react';
-import headerCss from '../public/css/header.css';
+import { AppBar, Box, Toolbar, IconButton } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header(props) {
   return (
-    <div className='header'>
-      <h1>Task Tracker ...</h1>
-    </div>
+    <Box>
+      <AppBar position='static'>
+        <Toolbar>
+          <IconButton size='large' edge='start' color='inherit' aria-label='menu' sx={{ mr: 2 }}>
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }
