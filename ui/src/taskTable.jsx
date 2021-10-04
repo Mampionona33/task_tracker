@@ -1,6 +1,7 @@
 import React from 'react';
-import TableRow from './TableRow';
 import db from './db.json';
+
+import { Paper, TableContainer, Table, TableHead, TableRow, TableCell } from '@mui/material';
 
 export default class TaskTable extends React.Component {
   constructor() {
@@ -14,44 +15,20 @@ export default class TaskTable extends React.Component {
     });
 
     const TableRows = [];
+    const tabHeader = db.tableHeader.map((header, index) => {
+      return <TableCell sx={{ fontSize: 11 }}>{header.value}</TableCell>;
+    });
 
     return (
-      <table className='taskTable'>
-        <thead>
-          <tr className='taskTable-header'>
-            <th className='taskTable-header-row'>Type de Trav</th>
-            <th className='taskTable-header-row'>Booth Number</th>
-            <th style={rowStyle} className='taskTable-header-row'>
-              Status Com
-            </th>
-            <th className='taskTable-header-row'>Status IVPN</th>
-            <th className='taskTable-header-row'>Url</th>
-            <th className='taskTable-header-row'>State</th>
-            <th style={rowStyle} className='taskTable-header-row'>
-              Nb Before
-            </th>
-            <th style={rowStyle} className='taskTable-header-row'>
-              Nb After
-            </th>
-            <th style={rowStyle} className='taskTable-header-row'>
-              Starting Date
-            </th>
-            <th style={rowStyle} className='taskTable-header-row'>
-              Validation Date
-            </th>
-            <th style={rowStyle} className='taskTable-header-row'>
-              Duration
-            </th>
-            <th style={rowStyle} className='taskTable-header-row'>
-              Productivity
-            </th>
-            <th style={rowStyle} className='taskTable-header-row'>
-              Actions
-            </th>
-          </tr>
-        </thead>
-        <tbody>{TableRows}</tbody>
-      </table>
+      <Paper sx={{ width: '100%' }}>
+        <TableContainer sx={{ maxHeight: 440 }}>
+          <Table stickyHeader aria-label='sticky table'>
+            <TableHead>
+              <TableRow>{tabHeader}</TableRow>
+            </TableHead>
+          </Table>
+        </TableContainer>
+      </Paper>
     );
   }
 }
