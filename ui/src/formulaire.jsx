@@ -1,7 +1,8 @@
 import React from 'react';
-import ListSelection from './Components/listSelection';
 import db from './db.json';
 import { Box, FormControl, TextField, InputLabel, Select, MenuItem, Paper, Button, Stack } from '@mui/material';
+import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
+import SaveOutlinedIcon from '@mui/icons-material/SaveOutlined';
 
 export default class Formulaire extends React.Component {
   constructor(props) {
@@ -137,8 +138,15 @@ export default class Formulaire extends React.Component {
             </Box>
             <Box gridRow={6} gridColumn={1} gridColumn='span 2'>
               <Stack direction='row' spacing={1}>
-                <Button variant='contained'>Valider</Button>
-                <Button variant='contained'>Enregistrer</Button>
+                <Button variant='contained'>
+                  <CheckOutlinedIcon />
+                  Valider
+                </Button>
+
+                <Button variant='contained'>
+                  <SaveOutlinedIcon />
+                  Enregistrer
+                </Button>
               </Stack>
             </Box>
           </Box>

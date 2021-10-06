@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Paper, Card, Typography, CardContent, CardHeader, Grid, TextField, Divider } from '@mui/material';
+import { Box, Button, Paper, Card, Typography, CardContent, CardHeader, Grid, TextField, Divider } from '@mui/material';
+import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
+import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 
 export default class SimulProdShow extends React.Component {
   constructor(props) {
@@ -38,7 +40,9 @@ export default class SimulProdShow extends React.Component {
                   </Box>
                 </Paper>
               </Box>
+
               <Divider sx={{ m: 2 }} />
+
               <Box display='flex' flexDirection='column'>
                 <Paper>
                   <Box display='grid' padding={2}>
@@ -56,6 +60,17 @@ export default class SimulProdShow extends React.Component {
                     </Box>
                   </Box>
                 </Paper>
+              </Box>
+
+              <Box sx={{ m: 2 }} display='grid' gap={1.5} gridTemplateColumns='repeat(auto-fill , minmax(75px, 1fr) )'>
+                <Button variant='contained' sx={{ maxWidth: 'fit-content' }}>
+                  <DeleteForeverOutlinedIcon />
+                  Vider
+                </Button>
+                <Button variant='contained' sx={{ maxWidth: 'fit-content' }}>
+                  <AssessmentOutlinedIcon />
+                  Tester
+                </Button>
               </Box>
             </CardContent>
           </Card>
