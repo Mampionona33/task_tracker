@@ -21,7 +21,7 @@ export default class TaskTable extends React.Component {
 
     return (
       <Paper sx={{ width: '100%' }}>
-        <TableContainer sx={{ maxHeight: 440 }}>
+        <TableContainer>
           <Table stickyHeader aria-label='sticky table'>
             <TableHead>
               <TableRow>{tabHeader}</TableRow>

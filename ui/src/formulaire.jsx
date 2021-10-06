@@ -82,70 +82,68 @@ export default class Formulaire extends React.Component {
     };
 
     return (
-      <Box sx={{ display: 'flex' }} margin={(0, 2, 0, 0)}>
-        <Paper elevation={3} sx={{ minWidth: '35%', m: '2rem' }}>
-          <form>
-            <Box display='grid' gap={2} padding={2}>
-              <Box gridColumn={1} gridRow={1}>
-                <TextField label='Num Fiche' variant='outlined' values={this.props.children} size='small' />
-              </Box>
-
-              <Box gridColumn={2} gridRow={1}>
-                <TextField label='Url' variant='outlined' values={this.props.children} size='small' />
-              </Box>
-
-              <Box gridColumn={1} gridRow={2}>
-                <FormControl fullWidth>
-                  <InputLabel id='demo-simple-select-autowidth-label'>Statut Com</InputLabel>
-                  <Select size='small' MenuProps={MenuProps} defaultValue='' labelId='demo-simple-select-autowidth-label' id='demo-simple-select-autowidth' value={this.state.value} onChange={this.handleChange} autoWidth label='Statut Com' size='small'>
-                    {statutCom}
-                  </Select>
-                </FormControl>
-              </Box>
-
-              <Box gridColumn={2} gridRow={2}>
-                <FormControl fullWidth>
-                  <InputLabel id='demo-simple-select-autowidth-label'>Statut IVPN</InputLabel>
-                  <Select size='small' defaultValue='' labelId='demo-simple-select-autowidth-label' id='demo-simple-select-autowidth' value={this.state.value} onChange={this.handleChange} autoWidth label='Statut IVPN'>
-                    {statutIvpn}
-                  </Select>
-                </FormControl>
-              </Box>
-
-              <Box gridColumn={1} gridRow={3}>
-                <FormControl fullWidth>
-                  <InputLabel id='demo-simple-select-autowidth-label'>Type de Trav</InputLabel>
-                  <Select size='small' MenuProps={MenuProps} defaultValue='' labelId='demo-simple-select-autowidth-label' id='demo-simple-select-autowidth' value={this.state.value} onChange={this.handleChange} autoWidth label='Type de Trav'>
-                    {typeTache}
-                  </Select>
-                </FormControl>
-              </Box>
-
-              <Box gridColumn={2} gridRow={3}>
-                <TextField size='small' label='Catégorie' variant='outlined' values={this.props.children} />
-              </Box>
-
-              <Box gridColumn={1} gridRow={4}>
-                <TextField size='small' label='Nombre Avant' variant='outlined' values={this.props.children} />
-              </Box>
-
-              <Box gridColumn={2} gridRow={4}>
-                <TextField size='small' label='Nombre Apres' variant='outlined' values={this.props.children} />
-              </Box>
-
-              <Box gridRow={5} gridColumn='span 2'>
-                <TextField multiline fullWidth label='Commentaire' variant='outlined' values={this.props.children} />
-              </Box>
-              <Box gridRow={6} gridColumn={1}>
-                <Stack direction='row' spacing={1}>
-                  <Button variant='contained'>Valider</Button>
-                  <Button variant='contained'>Enregistrer</Button>
-                </Stack>
-              </Box>
+      <Paper elevation={6} sx={{ m: '2rem', maxWidth: '100%' }}>
+        <form>
+          <Box display='grid' gap={2} padding={2} gridTemplateColumns='repeat(auto-fit, minmax(50%,1fr))'>
+            <Box>
+              <TextField label='Num Fiche' variant='outlined' values={this.props.children} size='small' />
             </Box>
-          </form>
-        </Paper>
-      </Box>
+
+            <Box>
+              <TextField label='Url' variant='outlined' values={this.props.children} size='small' />
+            </Box>
+
+            <Box>
+              <FormControl fullWidth>
+                <InputLabel id='demo-simple-select-autowidth-label'>Statut Com</InputLabel>
+                <Select defaultValue=' --- ' size='small' MenuProps={MenuProps} labelId='demo-simple-select-autowidth-label' id='demo-simple-select-autowidth' value={this.state.value} onChange={this.handleChange} autoWidth label='Statut Com' size='small'>
+                  {statutCom}
+                </Select>
+              </FormControl>
+            </Box>
+
+            <Box>
+              <FormControl fullWidth>
+                <InputLabel id='demo-simple-select-autowidth-label'>Statut IVPN</InputLabel>
+                <Select size='small' defaultValue='I' labelId='demo-simple-select-autowidth-label' id='demo-simple-select-autowidth' value={this.state.value} onChange={this.handleChange} autoWidth label='Statut IVPN'>
+                  {statutIvpn}
+                </Select>
+              </FormControl>
+            </Box>
+
+            <Box>
+              <FormControl fullWidth>
+                <InputLabel id='demo-simple-select-autowidth-label'>Type de Trav</InputLabel>
+                <Select size='small' MenuProps={MenuProps} defaultValue=' --- ' labelId='demo-simple-select-autowidth-label' id='demo-simple-select-autowidth' value={this.state.value} onChange={this.handleChange} autoWidth label='Type de Trav'>
+                  {typeTache}
+                </Select>
+              </FormControl>
+            </Box>
+
+            <Box>
+              <TextField size='small' label='Catégorie' variant='outlined' values={this.props.children} />
+            </Box>
+
+            <Box>
+              <TextField size='small' label='Nombre Avant' variant='outlined' values={this.props.children} />
+            </Box>
+
+            <Box>
+              <TextField size='small' label='Nombre Apres' variant='outlined' values={this.props.children} />
+            </Box>
+
+            <Box gridRow={5} gridColumn='span 2'>
+              <TextField multiline fullWidth label='Commentaire' variant='outlined' values={this.props.children} />
+            </Box>
+            <Box gridRow={6} gridColumn={1} gridColumn='span 2'>
+              <Stack direction='row' spacing={1}>
+                <Button variant='contained'>Valider</Button>
+                <Button variant='contained'>Enregistrer</Button>
+              </Stack>
+            </Box>
+          </Box>
+        </form>
+      </Paper>
     );
   }
 }
