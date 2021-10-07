@@ -63,10 +63,7 @@
     }
   ],
   "typTrav": [
-    {
-      "value": " --- ",
-      "label": " --- "
-    },
+    
     {
       "value": " Contenu ",
       "label": " Contenu"

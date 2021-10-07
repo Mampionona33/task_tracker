@@ -1,5 +1,5 @@
 import React from 'react';
-import db from './db.json';
+import db from '../db.json';
 
 import { Paper, TableContainer, Table, TableHead, TableRow, TableCell } from '@mui/material';
 

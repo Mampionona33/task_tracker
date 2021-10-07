@@ -2,11 +2,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import TaskList from './taskList.jsx';
+import PageRouter from './PageRouter'
+
 import 'babel-polyfill';
 import 'whatwg-fetch';
+import { HashRouter as Router } from 'react-router-dom';
 
-const element = <TaskList />;
+const element = (
+  <Router>
+    <PageRouter />
+  </Router>
+);
 
 ReactDOM.render(element, document.getElementById('root'));
 

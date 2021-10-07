@@ -18,6 +18,12 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.jsx?$/,
+        include: /node_modules/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
     ],
   },
   optimization: {

@@ -1,8 +1,16 @@
 import React from 'react';
 
+import db from '../db.json';
+
+const typeTrav = db.fiche.map((TypeTrav) => {
+  return TypeTrav.typeTrav;
+});
+
+const numFiche = db.fiche.map((Numfiche) => {
+  return Numfiche.numFiche;
+});
+
 export default function TableRow(props) {
-  const typeTrav = props.fiche.typeTrav;
-  const numFiche = props.fiche.numFiche;
   //   console.log(fiche);
   return (
     <tr>
