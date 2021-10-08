@@ -1,7 +1,8 @@
 import React from 'react';
+import { Paper } from '@mui/material';
 
 export default class TaskFilter extends React.Component {
   render() {
-    return <div>this is a placeholder for filtering tasks.</div>;
+    return <Paper>this is a placeholder for filtering tasks.</Paper>;
   }
 }

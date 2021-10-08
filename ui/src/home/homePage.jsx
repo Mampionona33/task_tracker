@@ -13,14 +13,23 @@ export default class HomePage extends React.Component {
       <React.Fragment>
         <CssBaseline />
         <Header />
-        <Box sx={{backgroundColor:'#F5F5F5'}} display='grid' justifyItems='center' gridTemplateColumns='repeat(auto-fit, minmax(350px, 1fr))' flexDirection='row' justifyContent='space-between' padding={(0, 5, 0, 5)}>
-          <Box>
+        <Box
+          sx={{ backgroundColor: '#F5F5F5' }}
+          display='grid'
+          justifyItems='center'
+          gridTemplateColumns='repeat(auto-fit, minmax(400px, 1fr))'
+          flexDirection='row'
+          justifyContent='space-between'
+          padding='2rem 0'
+          height='89vh'
+        >
+          <Box margin='1rem'>
             <Formulaire />
           </Box>
-          <Box padding={(0, 5, 0, 5)}>
+          <Box margin='1rem'>
             <ProdShow />
           </Box>
-          <Box padding={(0, 5, 50, 5)}>
+          <Box margin='1rem'>
             <SimulProdShow />
           </Box>
         </Box>

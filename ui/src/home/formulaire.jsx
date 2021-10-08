@@ -83,7 +83,7 @@ export default class Formulaire extends React.Component {
     };
 
     return (
-      <Paper elevation={6} sx={{ m: '2rem', maxWidth: '100%' }}>
+      <Paper elevation={6} sx={{ maxWidth: '100%' }}>
         <form>
           <Box display='grid' gap={2} padding={2} gridTemplateColumns='repeat(auto-fit, minmax(50%,1fr))'>
             <Box>

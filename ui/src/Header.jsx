@@ -6,13 +6,26 @@ import ListIcon from '@mui/icons-material/List';
 export default function Header(props) {
   return (
     <Box>
-      <AppBar position='static'>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <IconButton size='large' edge='start' color='inherit' aria-label='menu' sx={{ mr: 2 }}>
+      <AppBar position='sticky'>
+        <Toolbar
+          sx={{ justifyContent: 'space-between' }}
+        >
+          <IconButton
+            size='large'
+            edge='start'
+            color='inherit'
+            aria-label='menu'
+            sx={{ mr: 2 }}
+          >
             <MenuIcon />
           </IconButton>
           <span style={{ cursor: 'not-allowed' }}>
-            <Button href='/#/task_list' startIcon={<ListIcon />} variant='filed' sx={{ backgroundColor: 'rgba(3, 90, 220, 0.9)' }}>
+            <Button
+              href='/#/task_list'
+              startIcon={<ListIcon />}
+              variant='filed'
+              sx={{ backgroundColor: 'rgba(3, 90, 220, 0.9)' }}
+            >
               Mes tâches
             </Button>
           </span>
