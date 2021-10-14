@@ -4,6 +4,15 @@ import Header from '../Header.jsx';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Box } from '@mui/material';
 import TaskFilter from './taskFilter.jsx';
+import StateBoard from './StateBoard.jsx';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles({
+  col60: {
+    overflow: 'hidden',
+    maxWidth: '60px',
+  },
+});
 
 export default function TaskList() {
   return (
@@ -15,9 +24,10 @@ export default function TaskList() {
         display='flex'
         flexDirection='column'
         gap='5%'
-        padding='5%'
+        padding='0 5%'
         height='89vh'
       >
+        <StateBoard />
         <TaskFilter />
         <Box>
           <TaskTable />
