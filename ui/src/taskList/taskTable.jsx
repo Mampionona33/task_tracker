@@ -24,7 +24,6 @@ export default class TaskTable extends React.Component {
   }
 
   handleChangeRowsPerPage(event) {
-    console.log(event.target.value);
     this.setState({ rowsPerPage: parseInt(event.target.value), page: 0 });
   }
 

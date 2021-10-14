@@ -28,8 +28,6 @@ export default function TableRows(props) {
   const duree = props.fiche.duree;
   const productivity = props.fiche.productivity;
 
-  console.log(_id);
-
   return (
     <TableRow key={_id}>
       <TableCell className='taskTable-body-data'>{typeTrav}</TableCell>

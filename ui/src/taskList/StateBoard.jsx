@@ -8,11 +8,12 @@ const useStyles = makeStyles({
   },
 });
 
-export default function StateBoard() {
+export default function StateBoard(props) {
   const classes = useStyles();
+  const nbNorm = props.nbNorm;
   return (
     <Box display='flex' flexDirection='row' justifyContent='center'>
-      <Paper className={classes.m02}>Fiche Normal</Paper>
+      <Paper className={classes.m02}>Fiche Normal : {nbNorm}</Paper>
       <Paper className={classes.m02}>Fiche valider</Paper>
       <Paper className={classes.m02}>Fiche Stdby</Paper>
       <Paper className={classes.m02}>Fiche Paf</Paper>
