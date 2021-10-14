@@ -19,7 +19,7 @@ export default function TaskList() {
         height='89vh'
       >
         <TaskFilter />
-        <Box maxWidth='100%' display='flex' justifyContent='center'>
+        <Box>
           <TaskTable />
         </Box>
       </Box>

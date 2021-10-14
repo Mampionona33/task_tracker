@@ -9,36 +9,63 @@ import {
   TableRow,
   TableCell,
   TableBody,
+  TablePagination,
 } from '@mui/material';
 
 export default class TaskTable extends React.Component {
   constructor() {
     super();
+    this.state = {
+      rowsPerPage: 3,
+      page: 0,
+    };
+    this.handleChangeRowsPerPage = this.handleChangeRowsPerPage.bind(this);
+    this.handleChangePage = this.handleChangePage.bind(this);
   }
+
+  handleChangeRowsPerPage(event) {
+    console.log(event.target.value);
+    this.setState({ rowsPerPage: parseInt(event.target.value), page: 0 });
+  }
+
+  handleChangePage(event, newPage) {
+    this.setState({ page: newPage });
+  }
+
   render() {
-    const rowStyle = { /* border: '1.5px solid silver',  */ padding: 4 };
-
-    db.fiche.forEach((fiche) => {
-      // console.log(fiche.numFiche);
-    });
-
     const tabHeader = db.tableHeader.map((header, index) => {
-      return <TableCell>{header.value}</TableCell>;
+      return <TableCell key={index}>{header.value}</TableCell>;
     });
 
-    const TRows = db.fiche.map((fiche, index) => {
-      return <TableRows key={index} fiche={fiche} />;
+    const TRows = db.fiche.map((fiche) => {
+      return <TableRows key={fiche._id} fiche={fiche} />;
     });
-
     return (
-      <TableContainer component={Paper}>
-        <Table style={{ tableLayout: 'fixed' }}>
-          <TableHead>
-            <TableRow>{tabHeader}</TableRow>
-          </TableHead>
-          <TableBody>{TRows}</TableBody>
-        </Table>
-      </TableContainer>
+      <Paper>
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>{tabHeader}</TableRow>
+            </TableHead>
+            <TableBody>
+              {TRows.slice(
+                this.state.page * this.state.rowsPerPage,
+                this.state.page * this.state.rowsPerPage +
+                  this.state.rowsPerPage
+              )}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <TablePagination
+          rowsPerPageOptions={[3, 4]}
+          component='div'
+          count={TRows.length}
+          rowsPerPage={this.state.rowsPerPage}
+          page={this.state.page}
+          onRowsPerPageChange={this.handleChangeRowsPerPage}
+          onPageChange={this.handleChangePage}
+        />
+      </Paper>
     );
   }
 }
