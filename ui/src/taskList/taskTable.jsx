@@ -16,7 +16,7 @@ export default class TaskTable extends React.Component {
   constructor() {
     super();
     this.state = {
-      rowsPerPage: 3,
+      rowsPerPage: 2,
       page: 0,
     };
     this.handleChangeRowsPerPage = this.handleChangeRowsPerPage.bind(this);
@@ -56,7 +56,7 @@ export default class TaskTable extends React.Component {
           </Table>
         </TableContainer>
         <TablePagination
-          rowsPerPageOptions={[3, 4]}
+          rowsPerPageOptions={[2, 3, 4]}
           component='div'
           count={TRows.length}
           rowsPerPage={this.state.rowsPerPage}
