@@ -1,6 +1,14 @@
 import React from 'react';
 import db from '../db.json';
-import { Box, FormControl, TextField, InputLabel, Select, MenuItem, Paper, Button, Stack } from '@mui/material';
+import {
+  Box,
+  TextField,
+  Paper,
+  Button,
+  Stack,
+  Autocomplete,
+  Typography,
+} from '@mui/material';
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 import SaveOutlinedIcon from '@mui/icons-material/SaveOutlined';
 
@@ -49,27 +57,15 @@ export default class Formulaire extends React.Component {
   }
 
   render() {
-    const typeTache = db.typTrav.map((i, index) => {
-      return (
-        <MenuItem sx={{ fontSize: '12px' }} value={i.value} key={index}>
-          {i.label}
-        </MenuItem>
-      );
+    const labelTypeTrav = db.typTrav.map((i) => {
+      return i.label;
     });
+
     const statutIvpn = db.statIvpn.map((i, index) => {
-      return (
-        <MenuItem sx={{ fontSize: '12px' }} value={i.value} key={index}>
-          {i.label}
-        </MenuItem>
-      );
+      return i.label;
     });
-    const statutCom = db.statCom.map((i, index) => {
-      return (
-        <MenuItem sx={{ fontSize: '12px' }} value={i.value} key={index}>
-          {i.label}
-        </MenuItem>
-      );
-    });
+
+    const statutCom = db.statCom;
 
     const ITEM_HEIGHT = 54;
     const ITEM_PADDING_TOP = 8;
@@ -85,57 +81,101 @@ export default class Formulaire extends React.Component {
     return (
       <Paper elevation={6} sx={{ maxWidth: '100%' }}>
         <form>
-          <Box display='grid' gap={2} padding={2} gridTemplateColumns='repeat(auto-fit, minmax(50%,1fr))'>
+          <Box
+            display='grid'
+            gap={2}
+            padding={2}
+            gridTemplateColumns='repeat(auto-fit, minmax(50%,1fr))'
+          >
             <Box>
-              <TextField label='Num Fiche' variant='outlined' values={this.props.children} size='small' />
+              <TextField
+                label='Num Fiche'
+                variant='outlined'
+                values={this.props.children}
+                size='small'
+              />
             </Box>
 
             <Box>
-              <TextField label='Url' variant='outlined' values={this.props.children} size='small' />
+              <TextField
+                label='Url'
+                variant='outlined'
+                values={this.props.children}
+                size='small'
+              />
             </Box>
 
             <Box>
-              <FormControl fullWidth>
-                <InputLabel id='demo-simple-select-autowidth-label'>Statut Com</InputLabel>
-                <Select defaultValue=' --- ' size='small' MenuProps={MenuProps} labelId='demo-simple-select-autowidth-label' id='demo-simple-select-autowidth' value={this.state.value} onChange={this.handleChange} autoWidth label='Statut Com' size='small'>
-                  {statutCom}
-                </Select>
-              </FormControl>
+              <Autocomplete
+                size='small'
+                disablePortal
+                id='formulaire-type-trav'
+                options={db.statCom}
+                renderInput={(params) => (
+                  <TextField {...params} label='Statu Com' />
+                )}
+              />
+            </Box>
+            <Box>
+              <Autocomplete
+                size='small'
+                disablePortal
+                id='formulaire-type-trav'
+                options={labelTypeTrav}
+                renderInput={(params) => (
+                  <TextField {...params} label='type de trav' />
+                )}
+              />
+            </Box>
+            <Box>
+              <Autocomplete
+                size='small'
+                disablePortal
+                id='formulaire-type-trav'
+                options={statutIvpn}
+                renderInput={(params) => (
+                  <TextField {...params} label='Statu IVPN' />
+                )}
+              />
             </Box>
 
             <Box>
-              <FormControl fullWidth>
-                <InputLabel id='demo-simple-select-autowidth-label'>Statut IVPN</InputLabel>
-                <Select size='small' defaultValue='I' labelId='demo-simple-select-autowidth-label' id='demo-simple-select-autowidth' value={this.state.value} onChange={this.handleChange} autoWidth label='Statut IVPN'>
-                  {statutIvpn}
-                </Select>
-              </FormControl>
+              <TextField
+                size='small'
+                label='Catégorie'
+                variant='outlined'
+                values={this.props.children}
+              />
             </Box>
 
             <Box>
-              <FormControl fullWidth>
-                <InputLabel id='demo-simple-select-autowidth-label'>Type de Trav</InputLabel>
-                <Select size='small' MenuProps={MenuProps} defaultValue=' Contenu ' labelId='demo-simple-select-autowidth-label' id='demo-simple-select-autowidth' value={this.state.value} onChange={this.handleChange} autoWidth label='Type de Trav'>
-                  {typeTache}
-                </Select>
-              </FormControl>
+              <TextField
+                size='small'
+                label='Nombre Avant'
+                variant='outlined'
+                values={this.props.children}
+              />
             </Box>
 
             <Box>
-              <TextField size='small' label='Catégorie' variant='outlined' values={this.props.children} />
-            </Box>
-
-            <Box>
-              <TextField size='small' label='Nombre Avant' variant='outlined' values={this.props.children} />
-            </Box>
-
-            <Box>
-              <TextField size='small' label='Nombre Apres' variant='outlined' values={this.props.children} />
+              <TextField
+                size='small'
+                label='Nombre Apres'
+                variant='outlined'
+                values={this.props.children}
+              />
             </Box>
 
             <Box gridRow={5} gridColumn='span 2'>
-              <TextField multiline fullWidth label='Commentaire' variant='outlined' values={this.props.children} />
+              <TextField
+                multiline
+                fullWidth
+                label='Commentaire'
+                variant='outlined'
+                values={this.props.children}
+              />
             </Box>
+
             <Box gridRow={6} gridColumn={1} gridColumn='span 2'>
               <Stack direction='row' spacing={1}>
                 <Button variant='contained'>

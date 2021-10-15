@@ -1,8 +1,28 @@
 import React from 'react';
-import { Paper } from '@mui/material';
+import {
+  Autocomplete,
+  TextField,
+  Box,
+  Typography,
+  Card,
+  CardContent,
+} from '@mui/material';
 
-export default class TaskFilter extends React.Component {
-  render() {
-    return <Paper>this is a placeholder for filtering tasks.</Paper>;
-  }
+export default function TaskFilter(props) {
+  const stateOptions = props.state;
+  return (
+    <Box>
+      <Card>
+        <CardContent>
+          <Typography>Filtre</Typography>
+          <Autocomplete
+            disablePortal
+            id='combo-box-state'
+            options={stateOptions}
+            renderInput={(params) => <TextField {...params} label='Status' />}
+          />
+        </CardContent>
+      </Card>
+    </Box>
+  );
 }

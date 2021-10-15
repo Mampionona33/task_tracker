@@ -8,10 +8,12 @@ import StateBoard from './StateBoard.jsx';
 import db from '../db.json';
 
 export default function TaskList() {
-  const states = [];
+  const boothStates = [];
   const stateConst = db.fiche.map((fiche) => {
-    states.push(fiche.state);
+    boothStates.push(fiche.state);
   });
+
+  // console.log(boothStates);
 
   const itemCOunter = (array, item) => {
     let counter = 0;
@@ -23,17 +25,23 @@ export default function TaskList() {
     });
     if (counter < 10) {
       countInf = `0${counter}`;
-      console.log(countInf);
+      // console.log(countInf);
       return countInf;
     } else {
       return counter;
     }
   };
 
-  const normalState = itemCOunter(states, 'Normal');
-  const sbyState = itemCOunter(states, 'Sby');
-  const pafState = itemCOunter(states, 'Paf');
-  const validState = itemCOunter(states, 'Valide');
+  const normalState = itemCOunter(boothStates, 'Normal');
+  const sbyState = itemCOunter(boothStates, 'Sby');
+  const pafState = itemCOunter(boothStates, 'Paf');
+  const validState = itemCOunter(boothStates, 'Valide');
+
+  const stateOption = db.etatFiche.map((item) => {
+    return item.label;
+  });
+
+  // console.log(stateOption);
 
   return (
     <React.Fragment>
@@ -47,8 +55,13 @@ export default function TaskList() {
         padding='0 5%'
         height='89vh'
       >
-        <StateBoard nbNorm={normalState} nbSby={sbyState} nbPaf={pafState} nbValid={validState} />
-        <TaskFilter />
+        <StateBoard
+          nbNorm={normalState}
+          nbSby={sbyState}
+          nbPaf={pafState}
+          nbValid={validState}
+        />
+        <TaskFilter state={stateOption} />
         <Box>
           <TaskTable />
         </Box>
