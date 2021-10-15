@@ -15,16 +15,25 @@ export default function TaskList() {
 
   const itemCOunter = (array, item) => {
     let counter = 0;
+    let countInf = ``;
     array.flat(Infinity).forEach((x) => {
       if (x == item) {
         counter++;
       }
     });
-    console.log(counter);
-    return counter;
+    if (counter < 10) {
+      countInf = `0${counter}`;
+      console.log(countInf);
+      return countInf;
+    } else {
+      return counter;
+    }
   };
 
   const normalState = itemCOunter(states, 'Normal');
+  const sbyState = itemCOunter(states, 'Sby');
+  const pafState = itemCOunter(states, 'Paf');
+  const validState = itemCOunter(states, 'Valide');
 
   return (
     <React.Fragment>
@@ -38,7 +47,7 @@ export default function TaskList() {
         padding='0 5%'
         height='89vh'
       >
-        <StateBoard nbNorm={normalState}/>
+        <StateBoard nbNorm={normalState} nbSby={sbyState} nbPaf={pafState} nbValid={validState} />
         <TaskFilter />
         <Box>
           <TaskTable />
