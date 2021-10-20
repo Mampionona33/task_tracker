@@ -57,7 +57,7 @@ export default class TaskTable extends React.Component {
           </Table>
         </TableContainer>
         <TablePagination
-          rowsPerPageOptions={[2, 3, 4]}
+          rowsPerPageOptions={[2, 3]}
           component='div'
           count={TRows.length}
           rowsPerPage={this.state.rowsPerPage}

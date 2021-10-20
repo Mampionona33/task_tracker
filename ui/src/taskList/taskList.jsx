@@ -54,7 +54,7 @@ export default function TaskList() {
         sx={{ backgroundColor: '#F5F5F5' }}
         display='flex'
         flexDirection='column'
-        gap='5%'
+        gap='2%'
         padding='0 5%'
         height='89vh'
       >

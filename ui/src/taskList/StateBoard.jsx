@@ -9,7 +9,7 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 
 const useStyles = makeStyles({
   m02: {
-    margin: '1rem',
+    margin: '0.7rem',
     minWidth: '175px',
   },
   cardTitle: {
