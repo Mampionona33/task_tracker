@@ -26,6 +26,9 @@ const useStyles = makeStyles({
     fontSize: '1.2rem',
     fontWeight: '750',
   },
+  cardIcons: {
+    margin: '0 0 0 1rem',
+  },
 });
 
 export default function StateBoard(props) {
@@ -48,7 +51,7 @@ export default function StateBoard(props) {
             <Typography className={classes.cardTitle}>
               Nb Fiche Normal
             </Typography>
-            <WorkIcon sx={{ color: '#2471A3' }} />
+            <WorkIcon sx={{ color: '#2471A3' }} className={classes.cardIcons} />
           </Box>
           <Divider />
           <Typography className={classes.cardBodyText}>{nbNorm}</Typography>
@@ -61,7 +64,10 @@ export default function StateBoard(props) {
             <Typography className={classes.cardTitle}>
               Nb Fiche Stdby
             </Typography>
-            <ModeStandbyIcon sx={{ color: '#BA4A00' }} />
+            <ModeStandbyIcon
+              sx={{ color: '#BA4A00' }}
+              className={classes.cardIcons}
+            />
           </Box>
           <Divider />
           <Typography className={classes.cardBodyText}>{nbSby}</Typography>
@@ -72,7 +78,10 @@ export default function StateBoard(props) {
         <CardContent>
           <Box className={classes.cardTitleBox}>
             <Typography className={classes.cardTitle}>Nb Fiche Paf</Typography>
-            <StopScreenShareIcon sx={{ color: '#1B2631' }} />
+            <StopScreenShareIcon
+              sx={{ color: '#1B2631' }}
+              className={classes.cardIcons}
+            />
           </Box>
           <Divider />
           <Typography className={classes.cardBodyText}>{nbPaf}</Typography>
@@ -85,7 +94,10 @@ export default function StateBoard(props) {
             <Typography className={classes.cardTitle}>
               Nb Total Fiche En cours
             </Typography>
-            <BarChartIcon sx={{ color: '#28B463' }} />
+            <BarChartIcon
+              sx={{ color: '#28B463' }}
+              className={classes.cardIcons}
+            />
           </Box>
           <Divider />
           <Typography className={classes.cardBodyText}>{nbNonValid}</Typography>
@@ -98,7 +110,10 @@ export default function StateBoard(props) {
             <Typography className={classes.cardTitle}>
               Nb Total Fiche Valider
             </Typography>
-            <CheckCircleIcon sx={{ color: '#AF7AC5' }} />
+            <CheckCircleIcon
+              sx={{ color: '#AF7AC5' }}
+              className={classes.cardIcons}
+            />
           </Box>
           <Divider />
           <Typography className={classes.cardBodyText}>{nbValid}</Typography>
