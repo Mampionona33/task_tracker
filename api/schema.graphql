@@ -1,0 +1,24 @@
+type Fiche {
+  _id: String
+  id: Int
+  typeTrav: String
+  numFiche: String
+  statuCom: String
+  statuIvpn: String
+  url: String
+  state: String
+  nbBefor: Int
+  nbAft: Int
+  startDate: String
+  validDate: String
+  duree: String
+  productivity: String
+}
+
+type Query {
+  TableHeaderList: [String]
+  Fiche: [Fiche]
+}
+type Mutation {
+  addTableHeader(value: String!): [String]
+}

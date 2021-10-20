@@ -1,0 +1,441 @@
+{
+  "tableHeader": [
+    {
+      "id": 1,
+      "value": "Type de Trav"
+    },
+    {
+      "id": 2,
+      "value": "Booth Number"
+    },
+    {
+      "id": 3,
+      "value": "Status Com"
+    },
+    {
+      "id": 4,
+      "value": "Status IVPN"
+    },
+    {
+      "id": 5,
+      "value": "Url"
+    },
+    {
+      "id": 6,
+      "value": "Etat"
+    },
+    {
+      "id": 7,
+      "value": "Nb Avant"
+    },
+    {
+      "id": 8,
+      "value": "Nb Apres"
+    },
+    {
+      "id": 9,
+      "value": "Date Début"
+    },
+    {
+      "id": 10,
+      "value": "Date Validation"
+    },
+    {
+      "id": 11,
+      "value": "Durée"
+    },
+    {
+      "id": 12,
+      "value": "Productivity"
+    },
+    {
+      "id": 13,
+      "value": "Actions"
+    }
+  ],
+  "portailList": [
+    {
+      "value": "DI",
+      "label": "DI"
+    },
+    {
+      "value": "AE",
+      "label": "AE"
+    },
+    {
+      "value": "NE",
+      "label": "NE"
+    },
+    {
+      "value": "ME",
+      "label": "ME"
+    },
+    {
+      "value": "AERO",
+      "label": "AERO"
+    }
+  ],
+  "typTrav": [
+    {
+      "value": " Contenu ",
+      "label": " Contenu"
+    },
+    {
+      "value": " Contenu (Zappé) ",
+      "label": " Contenu (Zappé)"
+    },
+    {
+      "value": " Contenu (ContenuFullMAJ) ",
+      "label": " Contenu (ContenuFullMAJ)"
+    },
+    {
+      "value": " ContenuFullCréa ",
+      "label": " ContenuFullCréa"
+    },
+    {
+      "value": " ContenuFullCréaPrio ",
+      "label": " ContenuFullCréaPrio"
+    },
+    {
+      "value": " ContenuFullMAJ ",
+      "label": " ContenuFullMAJ"
+    },
+    {
+      "value": " ContenuFullMAJPrio ",
+      "label": " ContenuFullMAJPrio"
+    },
+    {
+      "value": " Créa ",
+      "label": " Créa"
+    },
+    {
+      "value": " CréaLight ",
+      "label": " CréaLight"
+    },
+    {
+      "value": " CréaLightPrio ",
+      "label": " CréaLightPrio"
+    },
+    {
+      "value": " CréaPrio ",
+      "label": " CréaPrio"
+    },
+    {
+      "value": " MAJ ",
+      "label": " MAJ"
+    },
+    {
+      "value": " MAJLight ",
+      "label": " MAJLight"
+    },
+    {
+      "value": " MAJLightPrio ",
+      "label": " MAJLightPrio"
+    },
+    {
+      "value": " MAJPrio ",
+      "label": " MAJPrio"
+    },
+    {
+      "value": " MAJFullPrio ",
+      "label": " MAJFullPrio"
+    },
+    {
+      "value": " MAJFull ",
+      "label": " MAJFull"
+    },
+    {
+      "value": " MAJSPEC ",
+      "label": " MAJSPEC"
+    },
+    {
+      "value": " PDF ",
+      "label": " PDF"
+    },
+    {
+      "value": " MAJ BOOST ",
+      "label": " MAJ BOOST"
+    },
+    {
+      "value": " Jugement ",
+      "label": " Jugement"
+    },
+    {
+      "value": " REASSOPROD ",
+      "label": " REASSOPROD"
+    },
+    {
+      "value": " AUTOVALIDCREA ",
+      "label": " AUTOVALIDCREA"
+    },
+    {
+      "value": " AUTOVALIDMAJ ",
+      "label": " AUTOVALIDMAJ"
+    },
+    {
+      "value": " RFQ ",
+      "label": " RFQ"
+    },
+    {
+      "value": " MAJ Prix ",
+      "label": " MAJ Prix"
+    },
+    {
+      "value": " Projet Prix ",
+      "label": " Projet Prix"
+    },
+    {
+      "value": " VALIDCLIENT ",
+      "label": " VALIDCLIENT"
+    },
+    {
+      "value": " VALIDOUT ",
+      "label": " VALIDOUT"
+    },
+    {
+      "value": " Matching Grille Tarifaire ",
+      "label": " Matching Grille Tarifaire"
+    },
+    {
+      "value": " Matching PDF ",
+      "label": " Matching PDF"
+    },
+    {
+      "value": " CREADemo ",
+      "label": " CREADemo"
+    },
+    {
+      "value": " MAJT ",
+      "label": " MAJT"
+    },
+    {
+      "value": " MAJNew ",
+      "label": " MAJNew"
+    },
+    {
+      "value": " AUTOVALIDCREADemo ",
+      "label": " AUTOVALIDCREADemo"
+    },
+    {
+      "value": " AUTOVALIDCREADemoLIGHT ",
+      "label": " AUTOVALIDCREADemoLIGHT"
+    },
+    {
+      "value": " AUTOVALIDCREADemoFULL ",
+      "label": " AUTOVALIDCREADemoFULL"
+    },
+    {
+      "value": " AUTOVALIDMAJT ",
+      "label": " AUTOVALIDMAJT"
+    },
+    {
+      "value": " AUTOVALIDMAJTLIGHT ",
+      "label": " AUTOVALIDMAJTLIGHT"
+    },
+    {
+      "value": " AUTOVALIDMAJTFULL ",
+      "label": " AUTOVALIDMAJTFULL"
+    },
+    {
+      "value": " AUTOVALIDMAJNew ",
+      "label": " AUTOVALIDMAJNew"
+    },
+    {
+      "value": " AUTOVALIDCREAPrio ",
+      "label": " AUTOVALIDCREAPrio"
+    },
+    {
+      "value": " AUTOVALIDCREALIGHTPrio ",
+      "label": " AUTOVALIDCREALIGHTPrio"
+    },
+    {
+      "value": " AUTOVALIDCREAFULLPrio ",
+      "label": " AUTOVALIDCREAFULLPrio"
+    },
+    {
+      "value": " AUTOVALIDMAJPrio ",
+      "label": " AUTOVALIDMAJPrio"
+    },
+    {
+      "value": " AUTOVALIDMAJLIGHTPrio ",
+      "label": " AUTOVALIDMAJLIGHTPrio"
+    },
+    {
+      "value": " AUTOVALIDMAJFULLPrio ",
+      "label": " AUTOVALIDMAJFULLPrio"
+    }
+  ],
+  "statCom": [
+    {
+      "value": " --- ",
+      "label": " ---"
+    },
+    {
+      "value": " Abandon ",
+      "label": " Abandon"
+    },
+    {
+      "value": " Abonné ",
+      "label": " Abonné"
+    },
+    {
+      "value": " Dégradé ",
+      "label": " Dégradé"
+    },
+    {
+      "value": " Dégradé Definitif ",
+      "label": " Dégradé Definitif"
+    },
+    {
+      "value": " Essai ",
+      "label": " Essai"
+    },
+    {
+      "value": " EssaiNouveau ",
+      "label": " Essai Nouveau"
+    },
+    {
+      "value": " Essai Payant ",
+      "label": " Essai Payant"
+    },
+    {
+      "value": " Retiré ",
+      "label": " Retiré"
+    }
+  ],
+  "statIvpn": [
+    {
+      "value": "I",
+      "label": "I"
+    },
+    {
+      "value": "V",
+      "label": "v"
+    },
+    {
+      "value": "p",
+      "label": "p"
+    },
+    {
+      "value": "N",
+      "label": "N"
+    }
+  ],
+  "etatFiche": [
+    {
+      "value": "Normal",
+      "label": "Normal"
+    },
+    {
+      "value": "Sby",
+      "label": "Sby"
+    },
+    {
+      "value": "Paf",
+      "label": "Paf"
+    },
+    {
+      "value": "Valide",
+      "label": "Valide"
+    }
+  ],
+  "fiche": [
+    {
+      "_id": "1",
+      "id": 1,
+      "typeTrav": "Contenu",
+      "numFiche": "15454",
+      "statuCom": "Abandon",
+      "statuIvpn": "I",
+      "url": "http://www.directindustry.com/r/FicheSociete.php?s=174711&w=1232305TiNo4Hs6tZmC5l2D56Z41Y1Z2l2V7pzgri52S4p3T3&droit=on",
+      "state": "Normal",
+      "nbBefor": 5,
+      "nbAft": 50,
+      "startDate": "29/10/2021",
+      "validDate": "29/10/2021",
+      "duree": "03:15:00",
+      "productivity": "100%"
+    },
+
+    {
+      "_id": "2",
+      "id": 2,
+      "typeTrav": "ContenuMaj",
+      "numFiche": "4545",
+      "statuCom": "---",
+      "statuIvpn": "P",
+      "url": "http://www.directindustry.com/r/FicheSociete.php?s=174711&w=1232305TiNo4Hs6tZmC5l2D56Z41Y1Z2l2V7pzgri52S4p3T3&droit=on",
+      "state": "Paf",
+      "nbBefor": 5,
+      "nbAft": 50,
+      "startDate": "29/10/2021",
+      "validDate": "29/10/2021",
+      "duree": "03:15:00",
+      "productivity": "102%"
+    },
+    {
+      "_id": "3",
+      "id": 3,
+      "typeTrav": "AUTOVALIDCREAPrio",
+      "numFiche": "188595",
+      "statuCom": "---",
+      "statuIvpn": "P",
+      "url": "http://www.directindustry.com/r/FicheSociete.php?s=188595&w=1636487TiNo4Hs6tZmC5l2D56Z41Y1Z2l2V7pzgri52S4p3T3&droit=on",
+      "state": "Sby",
+      "nbBefor": 0,
+      "nbAft": 22,
+      "startDate": "29/10/2021",
+      "validDate": "29/10/2021",
+      "duree": "03:15:00",
+      "productivity": "103%"
+    },
+    {
+      "_id": "4",
+      "id": 4,
+      "typeTrav": "AUTOVALIDCREAPrio",
+      "numFiche": "126963",
+      "statuCom": "Dégradé",
+      "statuIvpn": "P",
+      "url": "http://www.directindustry.com/restricted/FicheSociete.php?&s=126963&w=1277939TiNo4Hs6tZmC5l2D56Z41Y1Z2l2V7pzgri52S4p3T3&droit=on",
+      "state": "Valide",
+      "nbBefor": 11,
+      "nbAft": 11,
+      "startDate": "29/10/2021",
+      "validDate": "29/10/2021",
+      "duree": "03:15:00",
+      "productivity": "100%"
+    },
+    {
+      "_id": "5",
+      "id": 5,
+      "typeTrav": "CréaPrio",
+      "numFiche": "239657",
+      "statuCom": "---",
+      "statuIvpn": "P",
+      "url": "http://www.directindustry.com/r/FicheSociete.php?s=239657&w=1789817fs!RiGhtOwtSrCing&droit=stag&user=Mampionona",
+      "state": "Normal",
+      "nbBefor": 11,
+      "nbAft": 11,
+      "startDate": "29/10/2021",
+      "validDate": "29/10/2021",
+      "duree": "03:15:00",
+      "productivity": "100%"
+    },
+    {
+      "_id": "6",
+      "id": 6,
+      "typeTrav": "MAJPrio",
+      "numFiche": "14922",
+      "statuCom": "Abonné",
+      "statuIvpn": "P",
+      "url": "http://www.directindustry.com/r/FicheSociete.php?s=14922&w=98456ERfs!RiGhtOwtSrCing&droit=stag&user=mampionona",
+      "state": "Normal",
+      "nbBefor": 178,
+      "nbAft": 164,
+      "startDate": "29/10/2021",
+      "validDate": "29/10/2021",
+      "duree": "03:15:00",
+      "productivity": "100%"
+    }
+  ]
+}

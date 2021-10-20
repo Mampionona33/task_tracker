@@ -5,10 +5,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Chrome",
+      "name": "Launch Ui Chrome",
       "request": "launch",
       "type": "pwa-chrome",
       "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Api Chrome ",
+      "request": "launch",
+      "type": "pwa-chrome",
+      "url": "http://localhost:8000/graphql",
       "webRoot": "${workspaceFolder}"
     }
   ]
