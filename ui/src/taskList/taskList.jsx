@@ -5,11 +5,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { Box } from '@mui/material';
 import TaskFilter from './taskFilter.jsx';
 import StateBoard from './StateBoard.jsx';
-import db from '../db.json';
+import db from '../../../api/db.json';
 
 export default function TaskList() {
   const boothStates = [];
-  const stateConst = db.fiche.map((fiche) => {
+  const stateConst = db.fiches.map((fiche) => {
     boothStates.push(fiche.state);
   });
 

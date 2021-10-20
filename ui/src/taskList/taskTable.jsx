@@ -1,5 +1,5 @@
 import React from 'react';
-import db from '../db.json';
+import db from '../../../api/db.json';
 import TableRows from './TableRows.jsx';
 import {
   Paper,
@@ -36,9 +36,10 @@ export default class TaskTable extends React.Component {
       return <TableCell key={index}>{header.value}</TableCell>;
     });
 
-    const TRows = db.fiche.map((fiche) => {
+    const TRows = db.fiches.map((fiche) => {
       return <TableRows key={fiche._id} fiche={fiche} />;
     });
+
     return (
       <Paper>
         <TableContainer component={Paper}>

@@ -1,4 +1,4 @@
-type Fiche {
+type Fiches {
   _id: String
   id: Int
   typeTrav: String
@@ -7,6 +7,7 @@ type Fiche {
   statuIvpn: String
   url: String
   state: String
+  submiteState: Boolean
   nbBefor: Int
   nbAft: Int
   startDate: String
@@ -17,7 +18,7 @@ type Fiche {
 
 type Query {
   TableHeaderList: [String]
-  Fiche: [Fiche]
+  Fiches: [Fiche]
 }
 type Mutation {
   addTableHeader(value: String!): [String]
