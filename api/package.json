@@ -6,7 +6,7 @@
   "repository": "https://github.com/Mampionona33/task_tracker.git",
   "author": "Mampionona33 <ramamps33@gmail.com>",
   "scripts": {
-    "start": "nodemon -w  server.js",
+    "start": "nodemon -w . --ext .graphql,  server.js",
     "compile": "babel src --out-dir public"
   },
   "dependencies": {

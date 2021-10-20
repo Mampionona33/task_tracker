@@ -8,13 +8,15 @@ import StateBoard from './StateBoard.jsx';
 import db from '../../../api/db.json';
 
 export default function TaskList() {
-  const boothStates = [];
-  const stateConst = db.fiches.map((fiche) => {
-    boothStates.push(fiche.state);
+  const boothStates = db.fiches.map((item) => {
+    return item.state;
   });
-
+  const submitStates = db.fiches.map((items) => {
+    return items.submiteState;
+  });
   // console.log(boothStates);
 
+  // Function to count item in array
   const itemCOunter = (array, item) => {
     let counter = 0;
     let countInf = ``;
@@ -25,7 +27,7 @@ export default function TaskList() {
     });
     if (counter < 10) {
       countInf = `0${counter}`;
-      // console.log(countInf);
+      console.log(countInf);
       return countInf;
     } else {
       return counter;
@@ -35,7 +37,8 @@ export default function TaskList() {
   const normalState = itemCOunter(boothStates, 'Normal');
   const sbyState = itemCOunter(boothStates, 'Sby');
   const pafState = itemCOunter(boothStates, 'Paf');
-  const validState = itemCOunter(boothStates, 'Valide');
+  const submited = itemCOunter(submitStates, true);
+  const unSubmited = itemCOunter(submitStates, false);
 
   const stateOption = db.etatFiche.map((item) => {
     return item.label;
@@ -59,7 +62,8 @@ export default function TaskList() {
           nbNorm={normalState}
           nbSby={sbyState}
           nbPaf={pafState}
-          nbValid={validState}
+          nbValid={submited}
+          nbNonValid={unSubmited}
         />
         <TaskFilter state={stateOption} />
         <Box>

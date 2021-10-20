@@ -14,13 +14,13 @@ const schema = makeExecutableSchema({ typeDefs });
 
 // The root provides a resolver function for each API endpoint
 const root = {
-  TableHeaderList: () => {
+  GetTableHeaderList: () => {
     return db.tableHeader.map((txt) => {
       return txt.value;
     });
   },
-  Fiche: () => {
-    return db.fiche.map((fiches) => {
+  GetFiches: () => {
+    return db.fiches.map((fiches) => {
       return fiches;
     });
   },

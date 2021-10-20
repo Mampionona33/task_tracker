@@ -5,11 +5,12 @@ import WorkIcon from '@mui/icons-material/Work';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ModeStandbyIcon from '@mui/icons-material/ModeStandby';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
+import BarChartIcon from '@mui/icons-material/BarChart';
 
 const useStyles = makeStyles({
   m02: {
-    margin: '1.5rem',
-    minWidth: '200px',
+    margin: '1rem',
+    minWidth: '175px',
   },
   cardTitle: {
     fontSize: '0.8rem',
@@ -33,8 +34,14 @@ export default function StateBoard(props) {
   const nbSby = props.nbSby;
   const nbPaf = props.nbPaf;
   const nbValid = props.nbValid;
+  const nbNonValid = props.nbNonValid;
   return (
-    <Box display='flex' flexDirection='row' justifyContent='center' flexWrap='wrap'>
+    <Box
+      display='flex'
+      flexDirection='row'
+      justifyContent='center'
+      flexWrap='wrap'
+    >
       <Card className={classes.m02}>
         <CardContent>
           <Box className={classes.cardTitleBox}>
@@ -45,19 +52,6 @@ export default function StateBoard(props) {
           </Box>
           <Divider />
           <Typography className={classes.cardBodyText}>{nbNorm}</Typography>
-        </CardContent>
-      </Card>
-
-      <Card className={classes.m02}>
-        <CardContent>
-          <Box className={classes.cardTitleBox}>
-            <Typography className={classes.cardTitle}>
-              Nb Fiche Valider
-            </Typography>
-            <CheckCircleIcon sx={{ color: '#28B463' }} />
-          </Box>
-          <Divider />
-          <Typography className={classes.cardBodyText}>{nbValid}</Typography>
         </CardContent>
       </Card>
 
@@ -82,6 +76,32 @@ export default function StateBoard(props) {
           </Box>
           <Divider />
           <Typography className={classes.cardBodyText}>{nbPaf}</Typography>
+        </CardContent>
+      </Card>
+
+      <Card className={classes.m02}>
+        <CardContent>
+          <Box className={classes.cardTitleBox}>
+            <Typography className={classes.cardTitle}>
+              Nb Total Fiche En cours
+            </Typography>
+            <BarChartIcon sx={{ color: '#28B463' }} />
+          </Box>
+          <Divider />
+          <Typography className={classes.cardBodyText}>{nbNonValid}</Typography>
+        </CardContent>
+      </Card>
+
+      <Card className={classes.m02}>
+        <CardContent>
+          <Box className={classes.cardTitleBox}>
+            <Typography className={classes.cardTitle}>
+              Nb Total Fiche Valider
+            </Typography>
+            <CheckCircleIcon sx={{ color: '#AF7AC5' }} />
+          </Box>
+          <Divider />
+          <Typography className={classes.cardBodyText}>{nbValid}</Typography>
         </CardContent>
       </Card>
     </Box>

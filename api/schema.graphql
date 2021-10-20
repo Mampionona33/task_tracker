@@ -17,8 +17,8 @@ type Fiches {
 }
 
 type Query {
-  TableHeaderList: [String]
-  Fiches: [Fiche]
+  GetTableHeaderList: [String]
+  GetFiches: [Fiches]
 }
 type Mutation {
   addTableHeader(value: String!): [String]
