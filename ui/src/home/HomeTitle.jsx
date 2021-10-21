@@ -7,7 +7,7 @@ export default function HomeTitle(props) {
   return (
     <React.Fragment>
       <Typography m={'0 1rem'}>Fiche</Typography>
-      <Box display='flex' flexDirection='row' alignItems='center'>
+      <Box display='flex' flexDirection='row' alignItems='center' gap='10px'>
         <Link href='/new'>
           <Typography>+ NOUVELLE TACHE</Typography>
         </Link>

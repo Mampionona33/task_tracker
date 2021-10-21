@@ -14,7 +14,12 @@ export default class HomePage extends React.Component {
       <React.Fragment>
         <CssBaseline />
         <Header />
-        <Box display='flex' flexDirection='row' justifyContent='space-between' alignItems='center'>
+        <Box
+          display='flex'
+          flexDirection='row'
+          justifyContent='space-between'
+          alignItems='center'
+        >
           <HomeTitle />
         </Box>
         <Box
