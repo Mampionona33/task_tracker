@@ -6,6 +6,7 @@ import Formulaire from './formulaire.jsx';
 import Header from '../Header.jsx';
 import ProdShow from './ProdShow.jsx';
 import SimulProdShow from './SimulProdShow.jsx';
+import HomeTitle from './HomeTitle.jsx';
 
 export default class HomePage extends React.Component {
   render() {
@@ -13,6 +14,9 @@ export default class HomePage extends React.Component {
       <React.Fragment>
         <CssBaseline />
         <Header />
+        <Box display='flex' flexDirection='row' justifyContent='space-between' alignItems='center'>
+          <HomeTitle />
+        </Box>
         <Box
           sx={{ backgroundColor: '#F5F5F5' }}
           display='grid'
