@@ -77,192 +77,192 @@
   ],
   "typTrav": [
     {
-      "value": " Contenu ",
-      "label": " Contenu"
+      " value": " Contenu ",
+      "objectif": 16
     },
     {
-      "value": " Contenu (Zappé) ",
-      "label": " Contenu (Zappé)"
+      " value ": " Contenu (Zappé) ",
+      "objectif": 80
     },
     {
       "value": " Contenu (ContenuFullMAJ) ",
-      "label": " Contenu (ContenuFullMAJ)"
+      "objectif": 15.5
     },
     {
       "value": " ContenuFullCréa ",
-      "label": " ContenuFullCréa"
+      "objectif": 15
     },
     {
       "value": " ContenuFullCréaPrio ",
-      "label": " ContenuFullCréaPrio"
+      "objectif": 15
     },
     {
       "value": " ContenuFullMAJ ",
-      "label": " ContenuFullMAJ"
+      "objectif": 15.5
     },
     {
       "value": " ContenuFullMAJPrio ",
-      "label": " ContenuFullMAJPrio"
+      "objectif": 15.5
     },
     {
       "value": " Créa ",
-      "label": " Créa"
+      "objectif": 6.5
     },
     {
       "value": " CréaLight ",
-      "label": " CréaLight"
+      "objectif": 8.5
     },
     {
       "value": " CréaLightPrio ",
-      "label": " CréaLightPrio"
+      "objectif": 8.5
     },
     {
       "value": " CréaPrio ",
-      "label": " CréaPrio"
+      "objectif": 6.5
     },
     {
       "value": " MAJ ",
-      "label": " MAJ"
+      "objectif": 8
     },
     {
       "value": " MAJLight ",
-      "label": " MAJLight"
+      "objectif": 10
     },
     {
       "value": " MAJLightPrio ",
-      "label": " MAJLightPrio"
+      "objectif": 10
     },
     {
       "value": " MAJPrio ",
-      "label": " MAJPrio"
+      "objectif": 8
     },
     {
       "value": " MAJFullPrio ",
-      "label": " MAJFullPrio"
+      "objectif": 6.5
     },
     {
       "value": " MAJFull ",
-      "label": " MAJFull"
+      "objectif": 6.5
     },
     {
       "value": " MAJSPEC ",
-      "label": " MAJSPEC"
+      "objectif": 10
     },
     {
       "value": " PDF ",
-      "label": " PDF"
+      "objectif": 20
     },
     {
       "value": " MAJ BOOST ",
-      "label": " MAJ BOOST"
+      "objectif": 80
     },
     {
       "value": " Jugement ",
-      "label": " Jugement"
+      "objectif": 50
     },
     {
       "value": " REASSOPROD ",
-      "label": " REASSOPROD"
+      "objectif": 60
     },
     {
       "value": " AUTOVALIDCREA ",
-      "label": " AUTOVALIDCREA"
+      "objectif": 6.5
     },
     {
       "value": " AUTOVALIDMAJ ",
-      "label": " AUTOVALIDMAJ"
+      "objectif": 8
     },
     {
       "value": " RFQ ",
-      "label": " RFQ"
+      "objectif": 10
     },
     {
       "value": " MAJ Prix ",
-      "label": " MAJ Prix"
+      "objectif": 15
     },
     {
       "value": " Projet Prix ",
-      "label": " Projet Prix"
+      "objectif": 12
     },
     {
       "value": " VALIDCLIENT ",
-      "label": " VALIDCLIENT"
+      "objectif": 2
     },
     {
       "value": " VALIDOUT ",
-      "label": " VALIDOUT"
+      "objectif": 5
     },
     {
       "value": " Matching Grille Tarifaire ",
-      "label": " Matching Grille Tarifaire"
+      "objectif": 10
     },
     {
       "value": " Matching PDF ",
-      "label": " Matching PDF"
+      "objectif": 5
     },
     {
       "value": " CREADemo ",
-      "label": " CREADemo"
+      "objectif": 60
     },
     {
       "value": " MAJT ",
-      "label": " MAJT"
+      "objectif": 5
     },
     {
       "value": " MAJNew ",
-      "label": " MAJNew"
+      "objectif": 3
     },
     {
       "value": " AUTOVALIDCREADemo ",
-      "label": " AUTOVALIDCREADemo"
+      "objectif": 60
     },
     {
       "value": " AUTOVALIDCREADemoLIGHT ",
-      "label": " AUTOVALIDCREADemoLIGHT"
+      "objectif": 65
     },
     {
       "value": " AUTOVALIDCREADemoFULL ",
-      "label": " AUTOVALIDCREADemoFULL"
+      "objectif": 65
     },
     {
       "value": " AUTOVALIDMAJT ",
-      "label": " AUTOVALIDMAJT"
+      "objectif": 5
     },
     {
       "value": " AUTOVALIDMAJTLIGHT ",
-      "label": " AUTOVALIDMAJTLIGHT"
+      "objectif": 10
     },
     {
       "value": " AUTOVALIDMAJTFULL ",
-      "label": " AUTOVALIDMAJTFULL"
+      "objectif": 15
     },
     {
       "value": " AUTOVALIDMAJNew ",
-      "label": " AUTOVALIDMAJNew"
+      "objectif": 3
     },
     {
       "value": " AUTOVALIDCREAPrio ",
-      "label": " AUTOVALIDCREAPrio"
+      "objectif": 6.5
     },
     {
       "value": " AUTOVALIDCREALIGHTPrio ",
-      "label": " AUTOVALIDCREALIGHTPrio"
+      "objectif": 8.5
     },
     {
       "value": " AUTOVALIDCREAFULLPrio ",
-      "label": " AUTOVALIDCREAFULLPrio"
+      "objectif": 15
     },
     {
       "value": " AUTOVALIDMAJPrio ",
-      "label": " AUTOVALIDMAJPrio"
+      "objectif": 8
     },
     {
       "value": " AUTOVALIDMAJLIGHTPrio ",
-      "label": " AUTOVALIDMAJLIGHTPrio"
+      "objectif": 10
     },
     {
       "value": " AUTOVALIDMAJFULLPrio ",
-      "label": " AUTOVALIDMAJFULLPrio"
+      "objectif": 15
     }
   ],
   "statCom": [
