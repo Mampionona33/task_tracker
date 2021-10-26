@@ -1,0 +1,44 @@
+type Fiches {
+  _id: String
+  id: Int
+  typeTrav: String
+  numFiche: String
+  statuCom: String
+  statuIvpn: String
+  url: String
+  state: String
+  submiteState: Boolean
+  nbBefor: Int
+  nbAft: Int
+  startDate: String
+  validDate: String
+  duree: String
+  productivity: String
+}
+
+input NewFiche {
+  _id: String
+  id: Int
+  typeTrav: String
+  numFiche: String
+  statuCom: String
+  statuIvpn: String
+  url: String
+  state: String
+  submiteState: Boolean
+  nbBefor: Int
+  nbAft: Int
+  startDate: String
+  validDate: String
+  duree: String
+  productivity: String
+}
+
+type Query {
+  GetTableHeaderList: [String]
+  listFiches: [Fiches]
+}
+type Mutation {
+  AddTableHeader: [String]
+  AddNewFiche(Fiches: NewFiche!): Fiches!
+}
